@@ -1,15 +1,26 @@
-import {loaderStyles} from "../../ui-components/loaderStyle";
+import {loaderPart, loaderStyles, keyFrame} from "../../ui-components/loaderStyle";
+
 
 
 export const Loader = () => {
     const loader = loaderStyles();
+
+    let delay: number = 0.45;
+
+    const loaderAnimations = [];
+    for (let i = 0; i < 3; ++i) {
+        loaderAnimations[i] = loaderPart({
+            time: `-${delay}s`
+        });
+        delay -= 0.15;
+    }
+
     return (
-        <div className={loader.container}>
-            <div className={loader.circle} />
-            <div className={loader.circle} />
-            <div className={loader.circle} />
-            <div className={loader.circle} />
-            <div className={loader.circle} />
+        <div className={loader.loaderRing}>
+            <div className={loader.loaderRingPart + ' ' + loaderAnimations[0].loaderAnimationRing}/>
+            <div className={loader.loaderRingPart + ' ' + loaderAnimations[1].loaderAnimationRing} />
+            <div className={loader.loaderRingPart + ' ' + loaderAnimations[2].loaderAnimationRing} />
+            <div/>
         </div>
     );
 }

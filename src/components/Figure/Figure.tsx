@@ -41,8 +41,4 @@ export const Figure = ({src, arWidth = 16, arHeight = 9}: FigureProps) => {
     );
 }
 
-// Figure.propTypes = {
-//     src: PropTypes.string,
-//     arWidth: PropTypes.number,
-//     arHeight: PropTypes.number,
-// }
+

@@ -1,5 +1,6 @@
-// import './App.css';
+import './App.css';
 import {Figure} from '../components/Figure/Figure'
+import {Loader} from "../components/Loader/Loader";
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
                 arWidth={3}
                 arHeight={5}
             />
+            <Loader/>
         </div>
     );
 }
