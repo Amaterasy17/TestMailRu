@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {HTMLProps} from 'react'
 import PropTypes from 'prop-types'
 import {Loader} from "../Loader/Loader";
 import {createUseStyles} from "react-jss";
+import {FigureContainer, Image, ImageContainer} from "../../ui-components/figure";
 
 const image = createUseStyles({
     image: {
@@ -11,15 +12,15 @@ const image = createUseStyles({
 
 
 export interface FigureProps {
+    children?: JSX.Element|JSX.Element[]|string|any,
     src: string,
     arWidth?: number,
     arHeight?: number,
 }
 
-export const Figure = ({src, arWidth = 16, arHeight = 9}: FigureProps) => {
+export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps) => {
     const Loading = () => {
         setLoading(false);
-
     }
     const [loading, setLoading] = React.useState(true);
     const [visible, setVisible] = React.useState(false);
@@ -33,10 +34,15 @@ export const Figure = ({src, arWidth = 16, arHeight = 9}: FigureProps) => {
 
     return (
         <>
-            <div>
-                {loading && <Loader/>}
-                <img src={src} alt={'упс'} onLoad={Loading}/>
-            </div>
+            <FigureContainer>
+                <ImageContainer>
+                    {loading && <Loader/>}
+                    <Image src={src} alt={'упс'} onLoad={Loading}/>
+                </ImageContainer>
+                <figcaption>
+                    {children}
+                </figcaption>
+            </FigureContainer>
         </>
     );
 }

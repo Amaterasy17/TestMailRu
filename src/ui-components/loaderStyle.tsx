@@ -40,6 +40,16 @@ interface propsKeyFrame {
     key: string,
 }
 
+export const LoaderDiv = styled.div`
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
 
 export const keyFrame = createUseStyles({
     '@keyframes lds-ring': {
@@ -55,20 +65,21 @@ export const keyFrame = createUseStyles({
 export const loaderStyles = createUseStyles({
     loaderRing: {
         display: 'inline-block',
-        position: 'relative',
-        width: '80px',
-        height: '80px',
+        marginTop: '30%',
+        // position: 'relative',
+        width: '72px',
+        height: '72px',
     },
     loaderRingPart: {
         boxSizing: 'border-box',
         display: 'block',
         position: 'absolute',
-        width: '64px',
-        height: '64px',
-        border: '8px solid #46dbd3',
+        width: '56px',
+        height: '56px',
+        border: '6px solid #46dbd3',
         borderRadius: '50%',
         animation: `lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite`,
-        borderColor: '#46dbd3 transparent transparent transparent',
+        borderColor: '#cadae5 transparent transparent transparent',
     },
 });
 

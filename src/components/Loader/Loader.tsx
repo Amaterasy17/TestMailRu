@@ -1,6 +1,6 @@
 import {loaderPart, loaderStyles, keyFrame} from "../../ui-components/loaderStyle";
 
-
+import {LoaderDiv} from "../../ui-components/loaderStyle";
 
 export const Loader = () => {
     const loader = loaderStyles();
@@ -17,10 +17,10 @@ export const Loader = () => {
 
     return (
         <div className={loader.loaderRing}>
-            <div className={loader.loaderRingPart + ' ' + loaderAnimations[0].loaderAnimationRing}/>
-            <div className={loader.loaderRingPart + ' ' + loaderAnimations[1].loaderAnimationRing} />
-            <div className={loader.loaderRingPart + ' ' + loaderAnimations[2].loaderAnimationRing} />
-            <div/>
+            <LoaderDiv className={loader.loaderRingPart + ' ' + loaderAnimations[0].loaderAnimationRing}/>
+            <LoaderDiv className={loader.loaderRingPart + ' ' + loaderAnimations[1].loaderAnimationRing} />
+            <LoaderDiv className={loader.loaderRingPart + ' ' + loaderAnimations[2].loaderAnimationRing} />
+            <LoaderDiv/>
         </div>
     );
 }
