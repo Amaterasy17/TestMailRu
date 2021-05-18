@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import {Loader} from "../Loader/Loader";
 import {createUseStyles} from "react-jss";
 import {FigureContainer, Image, ImageContainer} from "../../ui-components/figure";
+import {Figcaption} from "../../ui-components/figcaption";
+import {Icon} from "../Icon/Icon";
 
-const image = createUseStyles({
-    image: {
-        visibility: 'hidden',
-    }
-})
+// const image = createUseStyles({
+//     image: {
+//         background: 'url('/')',
+//     }
+// })
 
 
 export interface FigureProps {
@@ -19,29 +21,36 @@ export interface FigureProps {
 }
 
 export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps) => {
-    const Loading = () => {
+    const onLoading = (ev: React.SyntheticEvent<HTMLImageElement>) => {
+        console.log('onSuccess');
         setLoading(false);
-    }
+    };
+
+    const onError = (ev: React.SyntheticEvent<HTMLImageElement>) => {
+        console.log('onError');
+        setLoading(false);
+        setError(true);
+    };
+
+
     const [loading, setLoading] = React.useState(true);
-    const [visible, setVisible] = React.useState(false);
-
-    const imageStyle = image();
-
-    React.useEffect(() => {
+    const [error, setError] = React.useState(false);
 
 
-    }, [loading]);
+    // const imageStyle = image();
+
 
     return (
         <>
             <FigureContainer>
                 <ImageContainer>
                     {loading && <Loader/>}
-                    <Image src={src} alt={'упс'} onLoad={Loading}/>
+                    <Image isNone={loading || error} src={src} alt={'Загрузка'} onLoad={onLoading} onError={onError}/>
+                    {error && <Icon/>}
                 </ImageContainer>
-                <figcaption>
+                <Figcaption>
                     {children}
-                </figcaption>
+                </Figcaption>
             </FigureContainer>
         </>
     );

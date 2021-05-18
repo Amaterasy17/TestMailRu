@@ -1,5 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
+
+type StyledImgProps = {
+    isNone: boolean,
+}
 
 export const FigureContainer = styled.div`
   display: flex;
@@ -7,10 +11,12 @@ export const FigureContainer = styled.div`
   margin: 2%;
   align-items: center;
   justify-content: center;
-  width: 10vw;
-  height: 20vw;
-  min-width: 90px;
-  min-height: 160px;
+  //width: 10vw;
+  //height: 20vw;
+  //min-width: 90px;
+  //min-height: 160px;
+  width: 120px;
+  height: 215px;
   background: white;
 `;
 
@@ -28,4 +34,12 @@ export const Image = styled.img`
   object-fit: contain;
   width: 100%;
   height: 100%;
+  display: block;
+
+  ${({isNone}: StyledImgProps) =>
+          isNone &&
+          css`
+            display: none;
+          `
+  }
 `;
