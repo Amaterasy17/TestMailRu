@@ -6,12 +6,9 @@ import {FigureContainer, Image, ImageContainer} from "../../ui-components/figure
 import {Figcaption} from "../../ui-components/figcaption";
 import {Icon} from "../Icon/Icon";
 import {resizingPhoto} from "../../utils/resizingPhoto";
+import styled from "styled-components";
 
-// const image = createUseStyles({
-//     image: {
-//         background: 'url('/')',
-//     }
-// })
+
 
 
 export interface FigureProps {
@@ -21,7 +18,7 @@ export interface FigureProps {
     arHeight?: number,
 }
 
-export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps) => {
+export const Figure = ({children, src, arWidth = 9, arHeight = 16}: FigureProps) => {
     const onLoading = (ev: React.SyntheticEvent<HTMLImageElement>) => {
         console.log('onSuccess');
         resizingPhoto(ev.target as HTMLImageElement, arWidth, arHeight);
@@ -33,6 +30,8 @@ export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps)
         setLoading(false);
         setError(true);
     };
+
+
 
 
     const [loading, setLoading] = React.useState(true);
@@ -55,6 +54,7 @@ export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps)
                     <Image isNone={loading || error} src={src} alt={'Загрузка'} onLoad={onLoading} onError={onError}/>
                     {error && <Icon/>}
                 </ImageContainer>
+
             </FigureContainer>
             <Figcaption>
                 {children}
@@ -63,4 +63,4 @@ export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps)
     );
 }
 
-//props={{arHeight: arHeight, arWidth: arWidth}
+
