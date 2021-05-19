@@ -4,8 +4,10 @@ export const IconDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  width: 50%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
 `;
 
 export const G = styled.g`
@@ -15,7 +17,7 @@ export const G = styled.g`
 export const Icon = () => {
     return (
         <IconDiv>
-            <svg height="512" viewBox="0 0 512 512" color="white" width="512" xmlns="http://www.w3.org/2000/svg">
+            <svg height="64" viewBox="0 0 512 512" color="white" width="512" xmlns="http://www.w3.org/2000/svg">
                 <G>
                     <path
                         d="m476 48h-440a28.032 28.032 0 0 0 -28 28v360a28.032 28.032 0 0 0 28 28h440a28.032 28.032 0 0 0 28-28v-360a28.032 28.032 0 0 0 -28-28zm-440 16h440a12.013 12.013 0 0 1 12 12v20h-464v-20a12.013 12.013 0 0 1 12-12zm440 384h-440a12.013 12.013 0 0 1 -12-12v-324h464v324a12.013 12.013 0 0 1 -12 12z"/>
