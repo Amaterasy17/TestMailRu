@@ -55,10 +55,10 @@ export const Figure = ({children, src, arWidth = 16, arHeight = 9}: FigureProps)
                     <Image isNone={loading || error} src={src} alt={'Загрузка'} onLoad={onLoading} onError={onError}/>
                     {error && <Icon/>}
                 </ImageContainer>
-                <Figcaption>
-                    {children}
-                </Figcaption>
             </FigureContainer>
+            <Figcaption>
+                {children}
+            </Figcaption>
         </>
     );
 }

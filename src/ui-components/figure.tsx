@@ -21,8 +21,10 @@ export const FigureContainer = styled.div`
   //min-width: 90px;
   //min-height: 160px;
   width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
   //height: 215px;
-  background: white;
 `;
 
 export const ImageContainer = styled.div`
@@ -44,7 +46,7 @@ export const ImageContainer = styled.div`
   height: 100%;
   //width: 100%;
   //height: 215px;
-  padding-top: calc(${(props: StyledImage) => props.arWidth/props.arHeight} * 100%);
+  padding-top: calc(${(props: StyledImage) => props.arHeight/props.arWidth} * 100%);
 `;
 
 
