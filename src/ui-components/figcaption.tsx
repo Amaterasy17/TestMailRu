@@ -8,5 +8,5 @@ export const Figcaption = styled.figcaption`
   }
   font-family: Montserrat-Light;
   font-size: 2.5vh;
-text-align: center;
+  text-align: center;
 `;

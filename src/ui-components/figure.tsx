@@ -5,6 +5,11 @@ type StyledImgProps = {
     isNone: boolean,
 }
 
+type StyledImage = {
+    arWidth: number,
+    arHeight: number,
+}
+
 export const FigureContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,8 +20,8 @@ export const FigureContainer = styled.div`
   //height: 20vw;
   //min-width: 90px;
   //min-height: 160px;
-  width: 120px;
-  height: 215px;
+  width: 100%;
+  //height: 215px;
   background: white;
 `;
 
@@ -26,15 +31,38 @@ export const ImageContainer = styled.div`
   justify-content: center;
   background-color: #1f2128;
   align-items: center;
+  
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+
   width: 100%;
-  height: 80%;
+  height: 100%;
+  //width: 100%;
+  //height: 215px;
+  padding-top: calc(${(props: StyledImage) => props.arWidth/props.arHeight} * 100%);
 `;
 
+
+
 export const Image = styled.img`
-  object-fit: contain;
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
+
+
+  position: absolute; /* абсолютное положение элемент */
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
 
   ${({isNone}: StyledImgProps) =>
           isNone &&

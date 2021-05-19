@@ -65,10 +65,9 @@ export const keyFrame = createUseStyles({
 export const loaderStyles = createUseStyles({
     loaderRing: {
         display: 'inline-block',
-        marginTop: '30%',
         // position: 'relative',
-        width: '72px',
-        height: '72px',
+        width: '60px',
+        height: '60px',
     },
     loaderRingPart: {
         boxSizing: 'border-box',
