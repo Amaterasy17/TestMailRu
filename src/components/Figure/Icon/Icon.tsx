@@ -1,5 +1,5 @@
-import {IconDiv} from "@components/Icon/styles";
-import {G} from "@components/Icon/styles";
+import {IconDiv} from "./styles";
+import {G} from "./styles";
 
 export const Icon = () => {
 	return (

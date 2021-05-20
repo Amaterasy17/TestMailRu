@@ -1,12 +1,12 @@
 import React from 'react'
-import { Loader } from '@components/Loader/Loader'
+import { Loader } from '@components/Figure/Loader/Loader'
 import {
 	FigureContainer,
 	Image,
 	ImageContainer,
 } from './styles'
 import { Figcaption } from './styles'
-import { Icon } from '@components/Icon/Icon'
+import { Icon } from '@components/Figure/Icon/Icon'
 
 export type FigureProps = {
 	children?: React.ReactNode,
