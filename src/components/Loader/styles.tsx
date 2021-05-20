@@ -1,22 +1,20 @@
 import styled from 'styled-components'
-import {createUseStyles} from 'react-jss'
-
+import { createUseStyles } from 'react-jss'
 
 type propsStyle = {
     time: string,
 }
 
-
 export const LoaderDiv = styled.div`
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-`;
+	@keyframes lds-ring {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+`
 
 export const keyFrame = createUseStyles({
     '@keyframes lds-ring': {
@@ -25,9 +23,9 @@ export const keyFrame = createUseStyles({
         },
         '100%': {
             transform: 'rotate(360deg)',
-        }
-    }
-});
+        },
+    },
+})
 
 export const loaderStyles = createUseStyles({
     loaderRing: {
@@ -48,10 +46,10 @@ export const loaderStyles = createUseStyles({
         animation: `lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite`,
         borderColor: '#cadae5 transparent transparent transparent',
     },
-});
+})
 
 export const loaderPart = createUseStyles({
     loaderAnimationRing: {
         animationDelay: (props: propsStyle) => props.time,
-    }
-});
+    },
+})
