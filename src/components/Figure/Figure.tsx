@@ -1,11 +1,10 @@
 import React, {HTMLProps, useEffect} from 'react'
 import PropTypes from 'prop-types'
-import {Loader} from "../Loader/Loader";
+import {Loader} from "@components/Loader/Loader";
 import {createUseStyles} from "react-jss";
 import {FigureContainer, Image, ImageContainer} from "../../ui-components/figure";
 import {Figcaption} from "../../ui-components/figcaption";
-import {Icon} from "../Icon/Icon";
-import {resizingPhoto} from "../../utils/resizingPhoto";
+import {Icon} from "@components/Icon/Icon";
 import styled from "styled-components";
 
 
@@ -21,7 +20,6 @@ export interface FigureProps {
 export const Figure = ({children, src, arWidth = 9, arHeight = 16}: FigureProps) => {
     const onLoading = (ev: React.SyntheticEvent<HTMLImageElement>) => {
         console.log('onSuccess');
-        resizingPhoto(ev.target as HTMLImageElement, arWidth, arHeight);
         setLoading(false);
     };
 
