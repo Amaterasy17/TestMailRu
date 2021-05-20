@@ -13,5 +13,6 @@ export const Figcaption = styled.figcaption`
   }
   font-family: -apple-system,"Roboto", "Oxygen", sans-serif;
   font-size: 2.5vh;
+  margin-top: 3px;
   text-align: center;
 `;
