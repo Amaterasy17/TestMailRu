@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, {css} from 'styled-components'
 
 type StyledImgProps = {
@@ -27,15 +26,7 @@ export const ImageContainer = styled.div`
   justify-content: center;
   background-color: #1f2128;
   align-items: center;
-  
   position: relative;
-  //&:before {
-  //  display: block;
-  //  content: "";
-  //  width: 100%;
-  //  height: 100%;
-  //}
-
   width: 100%;
   height: 100%;
   padding-top: calc(${(props: StyledImage) => props.arHeight/props.arWidth} * 100%);
@@ -53,7 +44,6 @@ export const Image = styled.img`
   left: 0;
   right: 0;
   bottom: 0;
-  
   ${({isNone}: StyledImgProps) =>
           isNone &&
           css`

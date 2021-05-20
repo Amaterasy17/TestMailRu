@@ -1,13 +1,14 @@
 import './App.css';
 import {Figure} from '@components/Figure/Figure'
+import React from "react";
 
 
-function App() {
+const App: React.FC = () => {
     return (
         <div className='App'>
             <div className='div-style'>
                 <Figure
-                    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                    src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                     //src="hahahhaha"
                     arWidth={9}
                     arHeight={16}
@@ -19,7 +20,7 @@ function App() {
 
             <div className='div-style'>
                 <Figure
-                    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                    src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                     //src="hahahhaha"
                     arWidth={3}
                     arHeight={5}
@@ -29,7 +30,7 @@ function App() {
             </div>
             <div className='div-style'>
                 <Figure
-                    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                    src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                     //src="hahahhaha"
                     arWidth={3}
                     arHeight={4}
@@ -39,7 +40,7 @@ function App() {
             </div>
             <div className='div-style'>
                 <Figure
-                    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                    src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                     //src="hahahhaha"
                     arWidth={1}
                     arHeight={2}
@@ -50,7 +51,7 @@ function App() {
 
             <div className='div-style'>
                 <Figure
-                    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                    src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                     //src="hahahhaha"
                     arWidth={16}
                     arHeight={9}
@@ -59,13 +60,13 @@ function App() {
 
             <div className='div-style'>
                 <Figure
-                    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                    src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                     //src="hahahhaha"
                 />
             </div>
             <div className='div-style'>
             <Figure
-                src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+                src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
                 //src="hahahhaha"
                 arWidth={1}
                 arHeight={5}

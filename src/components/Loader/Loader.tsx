@@ -1,4 +1,4 @@
-import {loaderPart, loaderStyles, keyFrame} from "../../ui-components/loaderStyle";
+import {loaderPart, loaderStyles} from "../../ui-components/loaderStyle";
 
 import {LoaderDiv} from "../../ui-components/loaderStyle";
 
