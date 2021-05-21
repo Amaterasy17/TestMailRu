@@ -56,7 +56,7 @@ describe('Tests of Figure component', () => {
 	it('test with not valid src of photo', () => {
 		const figure = render(
 			<TestDiv width={300} height={500}>
-				<Figure src='fakePicture' arWidth={9} arHeight={16} />
+				<Figure src="fakePicture" arWidth={9} arHeight={16} />
 			</TestDiv>
 		);
 		expect(figure).toMatchSnapshot();
@@ -65,9 +65,9 @@ describe('Tests of Figure component', () => {
 	it('default width and height with figcaption', () => {
 		const figure = render(
 			<TestDiv width={300} height={300}>
-				<Figure src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'>
+				<Figure src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006">
 					Автор:{' '}
-					<a href='https://www.pexels.com/@simonmigaj'>Simon Migaj</a>
+					<a href="https://www.pexels.com/@simonmigaj">Simon Migaj</a>
 				</Figure>
 			</TestDiv>
 		);
