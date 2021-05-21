@@ -35,6 +35,7 @@ describe('Tests of Figure component', () => {
 		[300, 500, 5, 1, photoSrc],
 		[300, 100, 16, 9, photoSrc],
 		[300, 500, 4, 3, photoSrc],
+		[300, 500, 15, 5, photoSrc],
 	])(
 		'tests of resizing pictures',
 		(

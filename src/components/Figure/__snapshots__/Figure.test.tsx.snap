@@ -7,7 +7,8 @@ exports[`Tests of Figure component default width and height with figcaption 1`] 
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -19,13 +20,13 @@ exports[`Tests of Figure component default width and height with figcaption 1`] 
           class="loaderRing-0-2-1"
         >
           <div
-            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d18-0-2-22"
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d21-0-2-25"
           />
           <div
-            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d19-0-2-23"
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d22-0-2-26"
           />
           <div
-            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d20-0-2-24"
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d23-0-2-27"
           />
           <div
             class="sc-bdnxRM dxUva"
@@ -59,7 +60,8 @@ exports[`Tests of Figure component test with not valid src of photo 1`] = `
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -71,13 +73,13 @@ exports[`Tests of Figure component test with not valid src of photo 1`] = `
           class="loaderRing-0-2-1"
         >
           <div
-            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d15-0-2-19"
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d18-0-2-22"
           />
           <div
-            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d16-0-2-20"
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d19-0-2-23"
           />
           <div
-            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d17-0-2-21"
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d20-0-2-24"
           />
           <div
             class="sc-bdnxRM dxUva"
@@ -104,7 +106,8 @@ exports[`Tests of Figure component tests of resizing pictures 1`] = `
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -149,7 +152,8 @@ exports[`Tests of Figure component tests of resizing pictures 2`] = `
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -194,7 +198,8 @@ exports[`Tests of Figure component tests of resizing pictures 3`] = `
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -239,7 +244,8 @@ exports[`Tests of Figure component tests of resizing pictures 4`] = `
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -284,7 +290,8 @@ exports[`Tests of Figure component tests of resizing pictures 5`] = `
   width="300"
 >
   <div
-    class="sc-gtsrHT jsSNzF"
+    class="sc-gtsrHT jOAJgy"
+    height="0"
   >
     <div
       class="sc-dlnjwi kbBcQf"
@@ -303,6 +310,52 @@ exports[`Tests of Figure component tests of resizing pictures 5`] = `
           />
           <div
             class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d14-0-2-18"
+          />
+          <div
+            class="sc-bdnxRM dxUva"
+          />
+        </div>
+        <img
+          alt="Загрузка"
+          class="sc-eCApnc dtPAjT"
+          src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+        />
+      </div>
+    </div>
+    <figcaption
+      class="sc-jSFjdj dQlkxt"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tests of Figure component tests of resizing pictures 6`] = `
+<div
+  class="sc-fujyAs cweGFr"
+  height="500"
+  width="300"
+>
+  <div
+    class="sc-gtsrHT jOAJgy"
+    height="0"
+  >
+    <div
+      class="sc-dlnjwi kbBcQf"
+    >
+      <div
+        class="sc-hKFxyN dJXxJ"
+      >
+        <div
+          class="loaderRing-0-2-1"
+        >
+          <div
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d15-0-2-19"
+          />
+          <div
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d16-0-2-20"
+          />
+          <div
+            class="sc-bdnxRM dxUva loaderRingPart-0-2-2 loaderAnimationRing-0-2-3 loaderAnimationRing-d17-0-2-21"
           />
           <div
             class="sc-bdnxRM dxUva"
