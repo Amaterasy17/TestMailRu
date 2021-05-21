@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Loader } from './Loader/Loader';
-import { Figcaption, FigureContainer, FigureDiv, Image, ImageContainer } from './styles';
+import {
+	Figcaption,
+	FigureContainer,
+	FigureDiv,
+	Image,
+	ImageContainer,
+} from './styles';
 import { Icon } from './Icon/Icon';
 
 export type FigureProps = {
@@ -11,24 +17,27 @@ export type FigureProps = {
 };
 
 type ChildrenProps = {
-	children: React.ReactNodeArray;
-}
+	children: React.ReactNodeArray,
+};
 
 export const Figure: React.FC<FigureProps> = ({
-																								children,
-																								src,
-																								arWidth = 9,
-																								arHeight = 16,
-																							}: FigureProps) => {
+	children,
+	src,
+	arWidth = 9,
+	arHeight = 16,
+}: FigureProps) => {
 	const [height, setHeight] = useState<number>(0);
+	const [loading, setLoading] = React.useState<boolean>(true);
+	const [error, setError] = React.useState<boolean>(false);
 
-	const ComponentContainer = React.forwardRef<HTMLDivElement, ChildrenProps>((props, ref) => (
-		<FigureDiv ref={ref} height={height}>
-			{props.children}
-		</FigureDiv>
-	));
+	const ComponentContainer = React.forwardRef<HTMLDivElement, ChildrenProps>(
+		(props, ref) => (
+			<FigureDiv ref={ref} height={height}>
+				{props.children}
+			</FigureDiv>
+		)
+	);
 	const ref = React.createRef<HTMLDivElement>();
-
 
 	const onLoading = (ev: React.SyntheticEvent<HTMLImageElement>) => {
 		setLoading(false);
@@ -39,20 +48,13 @@ export const Figure: React.FC<FigureProps> = ({
 		setError(true);
 	};
 
-	const [loading, setLoading] = React.useState<boolean>(true);
-	const [error, setError] = React.useState<boolean>(false);
-
 	useEffect(() => {
-		console.log('use Effect');
-		console.log(ref.current?.clientHeight);
-		console.log(ref.current?.clientWidth);
 		if (!ref.current) {
-			console.log('хаха');
 			return;
 		}
 
 		const width: number = ref.current.clientWidth;
-		const height = arHeight * width / arWidth;
+		const height = (arHeight * width) / arWidth;
 
 		if (height < ref.current.clientHeight) {
 			setHeight(height);

@@ -18,17 +18,23 @@ export const Loader = () => {
 		<div className={loader.loaderRing}>
 			<LoaderDiv
 				className={
-					loader.loaderRingPart + ' ' + loaderAnimations[0].loaderAnimationRing
+					loader.loaderRingPart +
+					' ' +
+					loaderAnimations[0].loaderAnimationRing
 				}
 			/>
 			<LoaderDiv
 				className={
-					loader.loaderRingPart + ' ' + loaderAnimations[1].loaderAnimationRing
+					loader.loaderRingPart +
+					' ' +
+					loaderAnimations[1].loaderAnimationRing
 				}
 			/>
 			<LoaderDiv
 				className={
-					loader.loaderRingPart + ' ' + loaderAnimations[2].loaderAnimationRing
+					loader.loaderRingPart +
+					' ' +
+					loaderAnimations[2].loaderAnimationRing
 				}
 			/>
 			<LoaderDiv />
