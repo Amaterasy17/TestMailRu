@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure, shallow } from 'enzyme';
+import { configure, render} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { Figure } from './Figure';
 import styled from 'styled-components';
@@ -16,15 +16,27 @@ const TestDiv = styled.div`
 	height: ${(props: testProps) => `${props.height}px`};
 `
 
+jest.mock('react', () => ({
+	...jest.requireActual('react'),
+	useLayoutEffect: jest.requireActual('react').useEffect,
+}));
+
+const photoSrc = 'https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006';
+
 describe('Tests of Figure component', () => {
+
+		afterAll(() => {
+			jest.resetModules();
+		})
+
 			test.each([
-				[300, 500, 5, 3, 'https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'],
-				[300, 500, 2, 1, 'https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'],
-				[300, 500, 5, 1, 'https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'],
-				[300, 100, 16, 9, 'https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'],
-				[300, 500, 4, 3, 'https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006']
+				[300, 500, 5, 3, photoSrc],
+				[300, 500, 2, 1, photoSrc],
+				[300, 500, 5, 1, photoSrc],
+				[300, 100, 16, 9, photoSrc],
+				[300, 500, 4, 3, photoSrc]
 			])('tests of resizing pictures', (width: number, height: number, arHeight: number, arWidth:number, src: string) => {
-				const figure = shallow(
+				const figure = render(
 					<TestDiv width={width} height={height}>
 						<Figure
 							src={src}
@@ -36,7 +48,7 @@ describe('Tests of Figure component', () => {
 				expect(figure).toMatchSnapshot();
 			});
 			it('test with not valid src of photo', () => {
-				const figure = shallow(
+				const figure = render(
 					<TestDiv width={300} height={500}>
 						<Figure
 							src='fakePicture'
@@ -48,8 +60,8 @@ describe('Tests of Figure component', () => {
 				expect(figure).toMatchSnapshot();
 			});
 
-			it('default with figcaption', () => {
-				const figure = shallow(
+			it('default width and height with figcaption', () => {
+				const figure = render(
 					<TestDiv width={300} height={300}>
 						<Figure
 							src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
