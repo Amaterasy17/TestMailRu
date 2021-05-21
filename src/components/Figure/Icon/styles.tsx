@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const IconDiv = styled.div`
 	display: flex;
@@ -8,8 +8,8 @@ export const IconDiv = styled.div`
 	top: 0;
 	height: 100%;
 	width: 100%;
-`
+`;
 
 export const G = styled.g`
 	fill: white;
-`
+`;

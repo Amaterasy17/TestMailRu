@@ -1,13 +1,13 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 type StyledImgProps = {
-    isNone: boolean,
-}
+	isNone: boolean,
+};
 
 type StyledImage = {
-    arWidth: number,
-    arHeight: number,
-}
+	arWidth: number,
+	arHeight: number,
+};
 
 export const FigureDiv = styled.div`
 	width: 100%;
@@ -23,7 +23,7 @@ export const FigureContainer = styled.div`
 	box-sizing: border-box;
 	height: 100%;
 	overflow: hidden;
-`
+`;
 
 export const ImageContainer = styled.div`
 	display: flex;
@@ -37,7 +37,7 @@ export const ImageContainer = styled.div`
 	padding-top: calc(
 		${(props: StyledImage) => props.arHeight / props.arWidth} * 100%
 	);
-`
+`;
 
 export const Image = styled.img`
 	width: 100%;
@@ -50,11 +50,11 @@ export const Image = styled.img`
 	right: 0;
 	bottom: 0;
 	${({ isNone }: StyledImgProps) =>
-    isNone &&
-    css`
+		isNone &&
+		css`
 			display: none;
 		`}
-`
+`;
 
 export const Figcaption = styled.figcaption`
 	//@font-face {
@@ -69,4 +69,4 @@ export const Figcaption = styled.figcaption`
 	font-size: 2.5vh;
 	margin-top: 3px;
 	text-align: center;
-`
+`;

@@ -1,5 +1,5 @@
-import {IconDiv} from "./styles";
-import {G} from "./styles";
+import { IconDiv } from './styles';
+import { G } from './styles';
 
 export const Icon = () => {
 	return (
@@ -27,5 +27,5 @@ export const Icon = () => {
 				</G>
 			</svg>
 		</IconDiv>
-	)
-}
+	);
+};

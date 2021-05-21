@@ -1,5 +1,5 @@
-import { loaderPart, loaderStyles } from './styles'
-import { LoaderDiv } from './styles'
+import { loaderPart, loaderStyles } from './styles';
+import { LoaderDiv } from './styles';
 
 export const Loader = () => {
 	const loader = loaderStyles();
@@ -10,7 +10,7 @@ export const Loader = () => {
 	for (let i = 0; i < 3; ++i) {
 		loaderAnimations[i] = loaderPart({
 			time: `-${delay}s`,
-		})
+		});
 		delay -= 0.15;
 	}
 
@@ -33,5 +33,5 @@ export const Loader = () => {
 			/>
 			<LoaderDiv />
 		</div>
-	)
-}
+	);
+};

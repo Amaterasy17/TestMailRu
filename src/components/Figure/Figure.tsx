@@ -1,19 +1,15 @@
-import React from 'react'
-import { Loader } from './Loader/Loader'
-import {
-	FigureContainer, FigureDiv,
-	Image,
-	ImageContainer,
-} from './styles';
-import { Figcaption } from './styles'
-import { Icon } from './Icon/Icon'
+import React from 'react';
+import { Loader } from './Loader/Loader';
+import { FigureContainer, FigureDiv, Image, ImageContainer } from './styles';
+import { Figcaption } from './styles';
+import { Icon } from './Icon/Icon';
 
 export type FigureProps = {
 	children?: React.ReactNode,
 	src: string,
 	arWidth?: number,
 	arHeight?: number,
-}
+};
 
 export const Figure: React.FC<FigureProps> = ({
 	children,
@@ -22,16 +18,16 @@ export const Figure: React.FC<FigureProps> = ({
 	arHeight = 16,
 }: FigureProps) => {
 	const onLoading = (ev: React.SyntheticEvent<HTMLImageElement>) => {
-		setLoading(false)
-	}
+		setLoading(false);
+	};
 
 	const onError = (ev: React.SyntheticEvent<HTMLImageElement>) => {
-		setLoading(false)
-		setError(true)
-	}
+		setLoading(false);
+		setError(true);
+	};
 
-	const [loading, setLoading] = React.useState<boolean>(true)
-	const [error, setError] = React.useState<boolean>(false)
+	const [loading, setLoading] = React.useState<boolean>(true);
+	const [error, setError] = React.useState<boolean>(false);
 
 	return (
 		<FigureDiv>
@@ -50,5 +46,5 @@ export const Figure: React.FC<FigureProps> = ({
 			</FigureContainer>
 			<Figcaption>{children}</Figcaption>
 		</FigureDiv>
-	)
-}
+	);
+};

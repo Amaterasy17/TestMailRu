@@ -1,6 +1,6 @@
-import './App.css'
-import { Figure } from '@components/Figure/Figure'
-import React from 'react'
+import './App.css';
+import { Figure } from '@components/Figure/Figure';
+import React from 'react';
 
 const App: React.FC = () => {
 	return (
@@ -52,11 +52,7 @@ const App: React.FC = () => {
 			</div>
 
 			<div className='div-style'>
-				<Figure
-					src='hahahhaha'
-					arWidth={16}
-					arHeight={9}
-				/>
+				<Figure src='hahahhaha' arWidth={16} arHeight={9} />
 			</div>
 
 			<div className='div-style'>
@@ -76,7 +72,7 @@ const App: React.FC = () => {
 				</Figure>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default App
+export default App;
