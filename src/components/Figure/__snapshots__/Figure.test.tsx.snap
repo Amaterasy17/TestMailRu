@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests of Figure component default with figcaption 1`] = `
+<div
+  className="sc-fujyAs cwgfdV"
+  height={300}
+  width={300}
+>
+  <Figure
+    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+  >
+    Автор:
+     
+    <a
+      href="https://www.pexels.com/@simonmigaj"
+    >
+      Simon Migaj
+    </a>
+  </Figure>
+</div>
+`;
+
+exports[`Tests of Figure component test with not valid src of photo 1`] = `
+<div
+  className="sc-fujyAs cweGFr"
+  height={500}
+  width={300}
+>
+  <Figure
+    arHeight={16}
+    arWidth={9}
+    src="fakePicture"
+  />
+</div>
+`;
+
+exports[`Tests of Figure component tests of resizing pictures 1`] = `
+<div
+  className="sc-fujyAs cweGFr"
+  height={500}
+  width={300}
+>
+  <Figure
+    arHeight={5}
+    arWidth={3}
+    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+  />
+</div>
+`;
+
+exports[`Tests of Figure component tests of resizing pictures 2`] = `
+<div
+  className="sc-fujyAs cweGFr"
+  height={500}
+  width={300}
+>
+  <Figure
+    arHeight={2}
+    arWidth={1}
+    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+  />
+</div>
+`;
+
+exports[`Tests of Figure component tests of resizing pictures 3`] = `
+<div
+  className="sc-fujyAs cweGFr"
+  height={500}
+  width={300}
+>
+  <Figure
+    arHeight={5}
+    arWidth={1}
+    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+  />
+</div>
+`;
+
+exports[`Tests of Figure component tests of resizing pictures 4`] = `
+<div
+  className="sc-fujyAs cwfECj"
+  height={100}
+  width={300}
+>
+  <Figure
+    arHeight={16}
+    arWidth={9}
+    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+  />
+</div>
+`;
+
+exports[`Tests of Figure component tests of resizing pictures 5`] = `
+<div
+  className="sc-fujyAs cweGFr"
+  height={500}
+  width={300}
+>
+  <Figure
+    arHeight={4}
+    arWidth={3}
+    src="https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006"
+  />
+</div>
+`;

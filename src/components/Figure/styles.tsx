@@ -9,6 +9,11 @@ type StyledImage = {
     arHeight: number,
 }
 
+export const FigureDiv = styled.div`
+	width: 100%;
+	height: 100%;
+`;
+
 export const FigureContainer = styled.div`
 	display: flex;
 	flex-direction: column;

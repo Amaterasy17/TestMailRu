@@ -1,12 +1,12 @@
 import React from 'react'
-import { Loader } from '@components/Figure/Loader/Loader'
+import { Loader } from './Loader/Loader'
 import {
-	FigureContainer,
+	FigureContainer, FigureDiv,
 	Image,
 	ImageContainer,
-} from './styles'
+} from './styles';
 import { Figcaption } from './styles'
-import { Icon } from '@components/Figure/Icon/Icon'
+import { Icon } from './Icon/Icon'
 
 export type FigureProps = {
 	children?: React.ReactNode,
@@ -34,7 +34,7 @@ export const Figure: React.FC<FigureProps> = ({
 	const [error, setError] = React.useState<boolean>(false)
 
 	return (
-		<>
+		<FigureDiv>
 			<FigureContainer>
 				<ImageContainer arHeight={arHeight} arWidth={arWidth}>
 					{loading && <Loader />}
@@ -49,6 +49,6 @@ export const Figure: React.FC<FigureProps> = ({
 				</ImageContainer>
 			</FigureContainer>
 			<Figcaption>{children}</Figcaption>
-		</>
+		</FigureDiv>
 	)
 }
