@@ -67,7 +67,7 @@ describe('Tests of Figure component', () => {
 							src='https://images.pexels.com/photos/1647214/pexels-photo-1647214.jpeg?dl&fit=crop&crop=entropy&w=640&h=1006'
 						>
 							Автор:{' '}
-							<a href="https://www.pexels.com/@simonmigaj">Simon Migaj</a>
+							<a href='https://www.pexels.com/@simonmigaj'>Simon Migaj</a>
 						</Figure>
 					</TestDiv>,
 				);
