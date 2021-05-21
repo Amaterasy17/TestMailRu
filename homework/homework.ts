@@ -3,9 +3,9 @@ function add(x: string|number, y: string|number) {
 		return x + y;
 	}
 	if (typeof x === 'number' && typeof y === 'number') {
-		return Number(x) + Number(y);
+		return x + y;
 	}
-	return new Error('tserror');
+	throw new Error('tserror');
 }
 
 const strings = add("1", "2"); //"12"

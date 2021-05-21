@@ -9,9 +9,18 @@ type StyledImage = {
 	arHeight: number,
 };
 
+type StyledDivProps = {
+	height: number,
+}
+
 export const FigureDiv = styled.div`
 	width: 100%;
-	height: 100%;
+	height: ${(props: StyledDivProps) => {
+		if (props.height === 0) {
+			return '100%';
+		}
+		return `${props.height}px`;
+	}};
 `;
 
 export const FigureContainer = styled.div`
