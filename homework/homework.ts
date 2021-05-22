@@ -1,4 +1,4 @@
-function add(x: string | number, y: string | number) {
+function add<Type>(x: Type, y: Type) {
 	if (typeof x === 'string' && typeof y === 'string') {
 		return x + y;
 	}
